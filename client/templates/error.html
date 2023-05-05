@@ -1,0 +1,22 @@
+<!-- Load template -->
+{% extends "base.html" %}
+{% block title %}404{% endblock %}
+
+<!-- Set contents -->
+{% block content %}
+    <!-- Error explanation -->
+    <div id="error_explain">
+        <h2>Directions to Stop {{ error_code }}</h2>
+        <p>
+            Looks like there are no buses to this destination...
+        </p>
+        <p class="lead text-center">
+            Why not head <a href="/" class="link-secondary">Home</a> and recoup?
+        </p>
+    </div>
+
+    <!-- Error image -->
+    <div class="container-fluid text-center" style="max-width:900px">
+        <img src="/static/404.jpg" class="img-thumbnail" alt="Bus Crash Image">
+    </div>
+{% endblock %}

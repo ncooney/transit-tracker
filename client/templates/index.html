@@ -1,0 +1,23 @@
+<!-- Load template -->
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+<!-- Set contents -->
+{% block content %}
+<!-- 477bc7 -->
+    <!-- Page title -->
+    <div id="index_intro" class="text-center">
+        <h2>Bus Tracking, Made Easy</h2>
+        <div class="container-fluid text-center" style="max-width:700px;">
+            <img src="/static/splash.jpg" class="img-thumbnail" alt="Holding Phone Image">
+        </div>
+    </div>
+
+    <div id="index_goal" class="text-center">
+        <p>
+            Enhancing the Charlottesville transit experience through the Internet of Things (IoT).
+        </p>
+        <a class="btn btn-success text-white" href="/buses/">Get Tracking</a>
+    </div>
+{% endblock %}

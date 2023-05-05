@@ -1,0 +1,23 @@
+<!-- Load template -->
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block nav_about %}active{% endblock %}
+
+<!-- Set contents -->
+{% block content %}
+    <!-- Sob story -->
+    <div id="about_sob">
+        <h2>Sob Story</h2>
+        <p>
+            Students at the University of Virginia (UVA) and members of the greater Charlottesville community often rely on the University Transit Service (UTS) and Charlottesville Area Transit (CAT) for transportation to and from class, work, grocery stores, etc. One complaint users frequently have with the UTS and CAT systems is the poor user experience provided by their respective route tracking applications. Specifically, both applications are miraculously inconsistent in the quality of their arrival time predictions. Naturally, the semi-stochastic nature of traffic in the greater Charlottesville area makes it inordinately difficult to predict exact arrival times. To address this issue, this project aims to enable Charlottesville citizens and students alike to make informed decisions about their potential transit usage by tracking individual bus locations through the Internet of Things (IoT).
+        </p>
+        <div class="container-fluid text-center" style="max-width:700px;">
+            <img src="/static/architecture.png" class="img-thumbnail" alt="Architecture Image">
+        </div>
+        <h2>System Design</h2>
+        <p>
+            The primary IoT protocol handling communication between buses and users is LoRaWAN. By taking advantage of GPS technology, LoRaWAN devices deployed on each bus can send location data to nearby LoRa gateways for upload to an online server. That location data can then be accessed by a client application to allow users to view current bus locations, and make informed decision about their potential transit usage. Future work could utilize machine learning to generate arrival time predictions based on this location data and traffic patterns from other data collection methods.
+        </p>
+    </div>
+{% endblock %}
+
